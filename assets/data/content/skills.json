@@ -1,0 +1,99 @@
+{
+  "skillCategories": [
+    {
+      "categoryName": "Backend Development",
+      "description": "Core backend development technologies and frameworks",
+      "skills": [
+        {
+          "name": "Python",
+          "proficiencyLevel": "Expert",
+          "yearsExperience": 4,
+          "iconUrl": "./assets/images/python_logo.png",
+          "description": "A popular programming language for web development, data analysis, and artificial intelligence."
+        },
+        {
+          "name": "Django",
+          "proficiencyLevel": "Expert", 
+          "yearsExperience": 4,
+          "iconUrl": "./assets/images/django.png",
+          "description": "A Python web framework that provides a high-level framework for creating secure and scalable web applications."
+        }
+      ],
+      "displayOrder": 1,
+      "iconClass": "las la-server"
+    },
+    {
+      "categoryName": "DevOps & Tools",
+      "description": "Development tools and containerization technologies",
+      "skills": [
+        {
+          "name": "Docker",
+          "proficiencyLevel": "Advanced",
+          "yearsExperience": 3,
+          "iconUrl": "./assets/images/docker.png", 
+          "description": "A containerization platform that allows developers to package applications into containers that can run on any environment."
+        },
+        {
+          "name": "Git",
+          "proficiencyLevel": "Expert",
+          "yearsExperience": 4,
+          "iconUrl": "./assets/images/git.png",
+          "description": "A version control system that enables developers to track changes to their codebase."
+        },
+        {
+          "name": "Visual Studio Code",
+          "proficiencyLevel": "Expert",
+          "yearsExperience": 4,
+          "iconUrl": "./assets/images/vscode.png",
+          "description": "A code editor that supports various programming languages and integrates with other tools such as git, debugging, and testing frameworks."
+        }
+      ],
+      "displayOrder": 2,
+      "iconClass": "las la-tools"
+    },
+    {
+      "categoryName": "Computer Vision",
+      "description": "Image processing and computer vision libraries",
+      "skills": [
+        {
+          "name": "OpenCV",
+          "proficiencyLevel": "Intermediate",
+          "yearsExperience": 2,
+          "iconUrl": "./assets/images/opencv.png",
+          "description": "A library of programming functions mainly aimed at real-time computer vision."
+        }
+      ],
+      "displayOrder": 3,
+      "iconClass": "las la-eye"
+    },
+    {
+      "categoryName": "System Architecture",
+      "description": "Backend system design and API development",
+      "skills": [
+        {
+          "name": "REST API Design",
+          "proficiencyLevel": "Expert",
+          "yearsExperience": 4,
+          "iconUrl": "./assets/images/django.png",
+          "description": "Designing and developing RESTful APIs using Django Rest Framework for scalable backend systems."
+        },
+        {
+          "name": "Database Design",
+          "proficiencyLevel": "Advanced",
+          "yearsExperience": 3,
+          "iconUrl": "./assets/images/django.png",
+          "description": "Database design and optimization for web applications with focus on performance and scalability."
+        },
+        {
+          "name": "AWS Deployment",
+          "proficiencyLevel": "Advanced", 
+          "yearsExperience": 3,
+          "iconUrl": "./assets/images/docker.png",
+          "description": "AWS deployment and management of web applications with containerized solutions."
+        }
+      ],
+      "displayOrder": 4,
+      "iconClass": "las la-project-diagram"
+    }
+  ]
+}

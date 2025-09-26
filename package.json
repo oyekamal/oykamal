@@ -1,0 +1,66 @@
+{
+  "name": "oykamal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Kamal - Python Backend Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "npm run optimize:images && npm run minify:css && npm run minify:js",
+    "optimize:images": "echo 'Image optimization would run here'",
+    "minify:css": "cleancss -o dist/assets/css/style.min.css assets/css/style.css",
+    "minify:js": "terser assets/js/main.js -o dist/assets/js/main.min.js --compress --mangle",
+    "validate:html": "html-validate index.html",
+    "validate:css": "stylelint assets/css/style.css",
+    "lighthouse": "lhci autorun",
+    "format": "prettier --write '**/*.{html,css,js,json,md}'",
+    "format:check": "prettier --check '**/*.{html,css,js,json,md}'",
+    "test": "npm run validate:html && npm run validate:css && npm run lighthouse",
+    "prepare": "npm run format && npm run test"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "python-developer",
+    "django",
+    "backend-developer",
+    "web-development"
+  ],
+  "author": {
+    "name": "Muhammad Kamal",
+    "email": "oyekamalkhan@gmail.com",
+    "url": "https://oyekamal.github.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oyekamal/oykamal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oyekamal/oykamal/issues"
+  },
+  "homepage": "https://oyekamal.github.io",
+  "devDependencies": {
+    "@lhci/cli": "^0.12.0",
+    "clean-css-cli": "^5.6.2",
+    "html-validate": "^8.5.0",
+    "http-server": "^14.1.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^7.0.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "terser": "^5.20.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

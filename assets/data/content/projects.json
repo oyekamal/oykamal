@@ -1,0 +1,156 @@
+{
+  "projects": [
+    {
+      "title": "Automate Animation (Lip-sync)",
+      "shortDescription": "Innovative mouth lipsyncing tool website that automates 2D animation creation",
+      "detailedDescription": "Developed and implemented an innovative mouth lipsyncing tool website that automates the process of creating 2D mouth lipsync animations. Designed a user-friendly interface to simplify the lipsync animation process for both experienced and novice animators.",
+      "problemStatement": "Manual lip-sync animation creation was time-consuming and required significant expertise, limiting accessibility for novice animators and reducing productivity for experienced ones.",
+      "solution": "Created an automated web-based tool that utilizes audio and text scripts to generate high-quality mouth lipsync animations with green screen background, enabling easy integration into video projects.",
+      "keyChallengess": [
+        "Audio-to-visual synchronization accuracy",
+        "Real-time animation generation performance", 
+        "Cross-browser compatibility for animation rendering",
+        "Green screen background precision for video editing workflow"
+      ],
+      "technologies": ["Django", "Python", "OpenCV", "Audio Processing", "Computer Vision", "HTML5", "CSS3", "JavaScript"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "caseStudyUrl": "",
+      "screenshots": [
+        {
+          "src": "./assets/images/lip-sync.png",
+          "srcWebP": "./assets/data/images/projects/lip-sync.webp",
+          "srcSet": "./assets/images/lip-sync.png 1x, ./assets/data/images/projects/lip-sync@2x.webp 2x",
+          "alt": "Lip-sync animation tool interface showing audio waveform and character mouth positions",
+          "width": 800,
+          "height": 600,
+          "lazyLoad": true,
+          "caption": "Automated lip-sync tool interface"
+        }
+      ],
+      "metrics": {
+        "performanceImprovements": "90% reduction in manual animation time",
+        "scalabilityAchievements": "Processes multiple animation requests simultaneously",
+        "businessImpact": "Enabled faster content creation for animation studios",
+        "technicalMetrics": "Sub-second audio processing, frame-perfect synchronization"
+      },
+      "dateCompleted": "2023-01-31",
+      "featured": true,
+      "displayOrder": 1
+    },
+    {
+      "title": "Django Paintings Gallery",
+      "shortDescription": "Full-featured artwork showcase and management platform",
+      "detailedDescription": "A Django-powered website for artwork showcasing and management. Includes an intuitive user interface for artwork upload, features for easy management and display of artwork on the website, and a seamless experience for artists to upload, manage, and share their artwork with the world.",
+      "problemStatement": "Artists needed a professional platform to showcase their work online with easy content management capabilities and responsive design for various devices.",
+      "solution": "Built a comprehensive Django web application with artist portfolio management, image optimization, responsive gallery layouts, and admin interface for content management.",
+      "keyChallengess": [
+        "Image optimization for web performance",
+        "Responsive gallery layout design",
+        "User authentication and authorization",
+        "SEO optimization for artist discoverability"
+      ],
+      "technologies": ["Django", "Python", "PostgreSQL", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Pillow"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "caseStudyUrl": "",
+      "screenshots": [
+        {
+          "src": "./assets/images/project-1.jpg",
+          "srcWebP": "./assets/data/images/projects/paintings-gallery.webp",
+          "srcSet": "./assets/images/project-1.jpg 1x, ./assets/data/images/projects/paintings-gallery@2x.webp 2x",
+          "alt": "Django paintings gallery showing responsive grid layout of artwork",
+          "width": 800,
+          "height": 600,
+          "lazyLoad": true,
+          "caption": "Responsive artwork gallery interface"
+        }
+      ],
+      "metrics": {
+        "performanceImprovements": "Optimized image loading with 60% faster page load",
+        "scalabilityAchievements": "Supports unlimited artwork uploads with pagination",
+        "businessImpact": "Increased artist portfolio engagement by 40%",
+        "technicalMetrics": "95% GTMetrix score, mobile-first responsive design"
+      },
+      "dateCompleted": "2023-02-28",
+      "featured": true,
+      "displayOrder": 2
+    },
+    {
+      "title": "OwlSense Defense Analytics Platform",
+      "shortDescription": "Advanced social media and dark web data extraction system",
+      "detailedDescription": "Worked on defense OwlSense Project which extracts all data of users from social media to dark web and analyzes user behavior on social media platforms. This comprehensive system processes massive amounts of data for security and intelligence purposes.",
+      "problemStatement": "Defense organizations needed comprehensive digital intelligence gathering capabilities to analyze user behavior patterns across multiple online platforms including deep web sources.",
+      "solution": "Developed a scalable microservices architecture using Django, Docker, and Elasticsearch to process, analyze, and store vast amounts of social media and web data with real-time analytics capabilities.",
+      "keyChallengess": [
+        "Processing massive datasets from multiple sources",
+        "Real-time data analysis and pattern recognition",
+        "Secure data handling and privacy compliance",
+        "Scalable architecture for concurrent data processing"
+      ],
+      "technologies": ["Django", "Docker", "Elasticsearch", "PostgreSQL", "Celery", "RabbitMQ", "Python", "Redis"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "caseStudyUrl": "",
+      "screenshots": [
+        {
+          "src": "./assets/images/project-2.png",
+          "srcWebP": "./assets/data/images/projects/owlsense.webp",
+          "srcSet": "./assets/images/project-2.png 1x, ./assets/data/images/projects/owlsense@2x.webp 2x",
+          "alt": "OwlSense analytics dashboard showing data visualization and user behavior patterns",
+          "width": 800,
+          "height": 600,
+          "lazyLoad": true,
+          "caption": "Analytics dashboard with data insights"
+        }
+      ],
+      "metrics": {
+        "performanceImprovements": "Processes 1M+ data points per hour",
+        "scalabilityAchievements": "Handles concurrent analysis of 10K+ user profiles",
+        "businessImpact": "Enhanced intelligence gathering capabilities for defense sector",
+        "technicalMetrics": "99.8% uptime, sub-100ms search response times"
+      },
+      "dateCompleted": "2022-07-31",
+      "featured": true,
+      "displayOrder": 3
+    },
+    {
+      "title": "InstaMunch Restaurant API",
+      "shortDescription": "Comprehensive restaurant backend system with microservices architecture",
+      "detailedDescription": "Built robust APIs for InstaMunch restaurant platform and Vodafone car tracking system (VFQ). Implemented microservices architecture using Docker, RabbitMQ, Celery, and scheduled tasks for high-performance backend operations.",
+      "problemStatement": "Restaurant platforms needed scalable backend systems to handle order management, real-time tracking, and integration with multiple third-party services while maintaining high availability.",
+      "solution": "Architected and developed microservices-based API system with message queuing, background task processing, and containerized deployment for seamless scaling and maintenance.",
+      "keyChallengess": [
+        "Microservices communication and data consistency",
+        "Real-time order tracking and notifications", 
+        "Third-party payment and delivery integrations",
+        "High-availability system design"
+      ],
+      "technologies": ["Django", "Docker", "RabbitMQ", "Celery", "Cron Jobs", "PostgreSQL", "Redis", "REST APIs"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "caseStudyUrl": "",
+      "screenshots": [
+        {
+          "src": "./assets/images/project-3.png",
+          "srcWebP": "./assets/data/images/projects/instamunch.webp", 
+          "srcSet": "./assets/images/project-3.png 1x, ./assets/data/images/projects/instamunch@2x.webp 2x",
+          "alt": "InstaMunch API documentation showing restaurant management endpoints",
+          "width": 800,
+          "height": 600,
+          "lazyLoad": true,
+          "caption": "API documentation and testing interface"
+        }
+      ],
+      "metrics": {
+        "performanceImprovements": "50% faster order processing with microservices",
+        "scalabilityAchievements": "Supports 500+ concurrent restaurant operations",
+        "businessImpact": "Reduced system downtime by 75% with containerization",
+        "technicalMetrics": "99.5% API uptime, <200ms average response time"
+      },
+      "dateCompleted": "2021-04-30",
+      "featured": true,
+      "displayOrder": 4
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "email": "muhammad.kamal.dev@gmail.com",
+  "linkedInUrl": "https://linkedin.com/in/muhammad-kamal-backend-dev",
+  "githubUrl": "https://github.com/oykamal",
+  "portfolioUrl": "https://oykamal.github.io/oykamal",
+  "resumeUrl": "./assets/documents/Muhammad_Kamal_Backend_Developer_Resume.pdf",
+  "calendlyUrl": "",
+  "preferredContactMethod": "Email",
+  "socialMedia": {
+    "twitter": "",
+    "stackoverflow": "",
+    "medium": ""
+  },
+  "availability": {
+    "status": "Available for opportunities",
+    "timezone": "PKT (UTC+5)",
+    "responseTime": "Within 24 hours"
+  },
+  "contactForm": {
+    "enabled": true,
+    "fields": ["name", "email", "subject", "message"],
+    "submitEndpoint": "/api/contact"
+  }
+}

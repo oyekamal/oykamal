@@ -1,0 +1,37 @@
+{
+  "name": "Muhammad Kamal",
+  "title": "Senior Python Backend Developer",
+  "specialization": "Django | REST APIs | System Architecture | Cloud Solutions", 
+  "tagline": "Building robust, scalable backend systems that power exceptional user experiences",
+  "professionalPhoto": {
+    "src": "./assets/images/face.jpeg",
+    "srcWebP": "./assets/data/images/face.webp",
+    "srcSet": "./assets/images/face.jpeg 1x, ./assets/data/images/face@2x.webp 2x",
+    "url": "./assets/data/images/face.webp",
+    "altText": "Muhammad Kamal - Senior Python Backend Developer",
+    "width": 300,
+    "height": 300,
+    "lazyLoad": false,
+    "caption": "Professional headshot"
+  },
+  "yearsOfExperience": 4,
+  "location": "Islamabad, Pakistan",
+  "availability": "Available for full-time opportunities",
+  "summary": "Senior Python Backend Developer with 4+ years of experience designing and implementing scalable RESTful APIs, microservices architectures, and cloud-native solutions. Proven expertise in Django, PostgreSQL, AWS deployment, and system optimization with a track record of delivering high-performance backend systems for diverse business requirements.",
+  "professionalStatement": "I specialize in crafting robust backend architectures that scale. From API design to database optimization, cloud deployment to system integration – I bring technical excellence and collaborative leadership to every project. My focus is on building sustainable, maintainable systems that drive business success.",
+  "coreCompetencies": [
+    "RESTful API Development & Design",
+    "Django & Django REST Framework",
+    "Database Design & Optimization (PostgreSQL, MySQL)",
+    "Microservices Architecture",
+    "AWS Cloud Services & Deployment",
+    "System Performance Optimization",
+    "API Security & Authentication",
+    "Test-Driven Development (TDD)"
+  ],
+  "workingStyle": {
+    "approach": "Collaborative problem-solver with strong technical leadership",
+    "strengths": ["System thinking", "Code quality advocacy", "Team mentorship", "Agile methodology"],
+    "collaboration": "Experienced in cross-functional teams, mentoring junior developers, and translating business requirements into technical solutions"
+  }
+}

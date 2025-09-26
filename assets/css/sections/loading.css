@@ -1,0 +1,340 @@
+/**
+ * Loading States & Dynamic Content Styles
+ * Enhanced loading animations and visual polish for dynamic content sections
+ * 
+ * @author Muhammad Kamal
+ * @version 1.0.0
+ */
+
+/* ===================================
+   LOADING STATES
+   =================================== */
+
+/* Loading Container */
+.loading-container {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Spinner */
+.loading-spinner {
+    --spinner-size: 2.5rem;
+    --spinner-color: var(--color-brand);
+    --spinner-border-width: 3px;
+    
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    border: var(--spinner-border-width) solid rgba(239, 213, 16, 0.2);
+    border-top: var(--spinner-border-width) solid var(--spinner-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(239, 213, 16, 0.3);
+}
+
+.loading-spinner.lg {
+    --spinner-size: 3.5rem;
+    --spinner-border-width: 4px;
+}
+
+.loading-spinner.sm {
+    --spinner-size: 1.5rem;
+    --spinner-border-width: 2px;
+}
+
+/* Loading Text */
+.loading-text {
+    color: var(--color-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===================================
+   DYNAMIC CONTENT TRANSITIONS
+   =================================== */
+
+/* Content Fade In */
+.content-loaded {
+    animation: contentFadeIn 0.6s ease-out forwards;
+}
+
+.content-loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+/* Section-Specific Loading States */
+#hero-loading,
+#about-loading,
+#projects-loading,
+#skills-loading,
+#contact-loading {
+    padding: 3rem 0;
+    background: var(--color-base);
+    border-radius: var(--border-radius-lg);
+    margin: 1rem 0;
+}
+
+/* Enhanced Content Containers */
+#hero-content,
+#about-content,
+#projects-content,
+#skills-content,
+#contact-content {
+    min-height: 200px;
+    transition: all 0.4s ease-out;
+}
+
+/* Error State */
+.content-error {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: var(--border-radius-lg);
+    color: #dc3545;
+}
+
+.content-error .error-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.content-error .error-message {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.content-error .error-details {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===================================
+   VISUAL POLISH ENHANCEMENTS
+   =================================== */
+
+/* Section Dividers */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(239, 213, 16, 0.3) 25%,
+        rgba(239, 213, 16, 0.6) 50%,
+        rgba(239, 213, 16, 0.3) 75%,
+        transparent
+    );
+    margin: 3rem 0;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-brand);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(239, 213, 16, 0.5);
+}
+
+/* Enhanced Typography */
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--color-brand), var(--color-brand2));
+    border-radius: 2px;
+}
+
+/* Content Cards Polish */
+.content-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-brand), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content-card:hover::before {
+    opacity: 1;
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes contentFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+/* Skeleton Loading for Content */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-text {
+    height: 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-text:last-child {
+    width: 80%;
+}
+
+.skeleton-title {
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 60%;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    .loading-container {
+        min-height: 150px;
+        padding: 1.5rem;
+    }
+    
+    .loading-spinner {
+        --spinner-size: 2rem;
+    }
+    
+    .loading-text {
+        font-size: 0.9rem;
+    }
+    
+    .section-divider {
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-container {
+        min-height: 120px;
+        padding: 1rem;
+    }
+    
+    .loading-spinner.lg {
+        --spinner-size: 2.5rem;
+    }
+}
+
+/* ===================================
+   HIGH CONTRAST MODE
+   =================================== */
+
+@media (prefers-contrast: high) {
+    .loading-spinner {
+        border: var(--spinner-border-width) solid #000;
+        border-top: var(--spinner-border-width) solid var(--color-brand);
+        box-shadow: none;
+    }
+    
+    .content-card {
+        border: 2px solid var(--color-brand);
+        background: var(--color-base);
+    }
+    
+    .section-divider {
+        background: var(--color-brand);
+        height: 2px;
+    }
+}
+
+/* ===================================
+   REDUCED MOTION
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .loading-spinner {
+        animation: none;
+        border: var(--spinner-border-width) solid var(--color-brand);
+    }
+    
+    .content-loaded,
+    .content-loading {
+        animation: none;
+        transition: none;
+    }
+    
+    .pulse,
+    .shimmer {
+        animation: none;
+    }
+}
