@@ -32,6 +32,7 @@
     .muted-link { color: var(--bs-secondary-color); text-decoration: none; }
     .muted-link:hover { color: var(--bs-body-color); }
     .section-title { margin-bottom: 1.25rem; }
+    .section.compact { padding: 40px 0; }
   </style>
 
   <!-- Default content fallback (edit content.json later) -->
@@ -81,6 +82,46 @@
         ],
         "links": { "github": "https://github.com/Automate-Animation/synctoon", "demo": null }
       }
+    ],
+    "channels": [
+      {
+        "title": "Instagram @oykamal",
+        "description": "Vlogs and updates.",
+        "url": "https://instagram.com/oykamal",
+        "icon": "fa-brands fa-instagram",
+        "btn_label": "Follow"
+      },
+      {
+        "title": "Instagram @kamalkepainitng",
+        "description": "My paintings.",
+        "url": "https://instagram.com/kamalkepainitng",
+        "icon": "fa-brands fa-instagram",
+        "btn_label": "Follow"
+      },
+      {
+        "title": "Instagram @kamalkecoding",
+        "description": "Coding tools and builds.",
+        "url": "https://instagram.com/kamalkecoding",
+        "icon": "fa-brands fa-instagram",
+        "btn_label": "Follow"
+      },
+      {
+        "title": "YouTube @oykamal",
+        "description": "Vlogs and videos.",
+        "url": "https://www.youtube.com/@oykamal",
+        "icon": "fa-brands fa-youtube",
+        "btn_label": "Subscribe"
+      }
+    ],
+    "hobbies": [
+      "running",
+      "cycling",
+      "hiking",
+      "painting",
+      "coding",
+      "psychology",
+      "film making",
+      "traveling"
     ],
     "experience": [
       {
@@ -186,6 +227,7 @@
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
         </ul>
       </div>
     </div>
@@ -254,6 +296,18 @@
       <div class="container">
         <h2 class="section-title fw-semibold">Contact</h2>
         <div class="d-flex align-items-center gap-3 flex-wrap" id="contact-links"></div>
+      </div>
+    </section>
+
+    <!-- Hobbies (last, compact) -->
+    <section id="hobbies" class="section bg-body-tertiary compact">
+      <div class="container">
+        <h2 class="section-title fw-semibold">Hobbies</h2>
+        <div id="hobbies-list" class="d-flex flex-wrap mb-3"></div>
+        <div>
+          <div class="text-secondary mb-2">Channels</div>
+          <div id="channels-inline" class="d-flex flex-wrap gap-2"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -337,6 +391,8 @@
       </div>
     </div>
   </script>
+
+  
 
   <!-- Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
@@ -496,6 +552,39 @@
       }
     }
 
+    function renderChannels(data) {
+      const bar = document.getElementById('channels-inline');
+      if (!bar) return;
+      bar.innerHTML = '';
+      const items = Array.isArray(data.channels) ? data.channels : [];
+      items.forEach(ch => {
+        const a = el('a', 'btn btn-outline-secondary btn-sm icon-btn', (ch.icon ? `<i class="${ch.icon}"></i> ` : '') + (ch.title || ch.btn_label || 'Open'));
+        a.href = ch.url || '#'; a.target = '_blank'; a.rel = 'noreferrer';
+        bar.appendChild(a);
+      });
+    }
+
+    function renderHobbies(data) {
+      const box = document.getElementById('hobbies-list');
+      if (!box) return;
+      box.innerHTML = '';
+      const hobbies = Array.isArray(data.hobbies) ? data.hobbies : [];
+      const tplEl = document.getElementById('tpl-skill');
+      const canTpl = !!(window.Mustache && tplEl);
+      if (canTpl) {
+        const tpl = tplEl.innerHTML;
+        hobbies.forEach(h => {
+          const html = Mustache.render(tpl, { name: h });
+          box.insertAdjacentHTML('beforeend', html);
+        });
+      } else {
+        hobbies.forEach(h => {
+          const span = el('span', 'badge rounded-pill badge-soft me-2 mb-2', h);
+          box.appendChild(span);
+        });
+      }
+    }
+
     function renderTools(data) {
       const grid = document.getElementById('tools-grid');
       if (!grid) return;
@@ -618,6 +707,8 @@
       try { renderHero(data); } catch (e) { console.error('hero', e); }
       try { renderAbout(data); } catch (e) { console.error('about', e); }
       try { renderSkills(data); } catch (e) { console.error('skills', e); }
+      try { renderHobbies(data); } catch (e) { console.error('hobbies', e); }
+      try { renderChannels(data); } catch (e) { console.error('channels', e); }
       try { renderTools(data); } catch (e) { console.error('tools', e); }
       try { renderExperience(data); } catch (e) { console.error('experience', e); }
       try { renderProjects(data); } catch (e) { console.error('projects', e); }
