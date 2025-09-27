@@ -1,514 +1,556 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamal developer</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/aos.css">
-    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Backend Engineer — APIs, systems, and platforms.">
+  <title>Kamal · Backend Engineer</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+    .navbar { backdrop-filter: saturate(180%) blur(8px); }
+    .navbar.bg-body { background-color: rgba(var(--bs-body-bg-rgb), 0.7) !important; }
+    .avatar { width: 36px; height: 36px; object-fit: cover; border-radius: 50%; }
+    .section { padding: 80px 0; }
+    .hero { padding: 120px 0 80px; }
+    .hero-cta .btn { margin-right: .5rem; margin-bottom: .5rem; }
+    .badge-soft { background: var(--bs-secondary-bg); color: var(--bs-body-color); border: 1px solid var(--bs-border-color); }
+    .stack .badge { margin: .125rem .25rem .125rem 0; }
+    .icon-btn { display: inline-flex; align-items: center; gap: .5rem; }
+    .icon-btn i { opacity: .9; }
+    .footer { border-top: 1px solid var(--bs-border-color); }
+    .muted-link { color: var(--bs-secondary-color); text-decoration: none; }
+    .muted-link:hover { color: var(--bs-body-color); }
+    .section-title { margin-bottom: 1.25rem; }
+  </style>
+
+  <!-- Default content fallback (edit content.json later) -->
+  <script id="default-content" type="application/json">
+  {
+    "name": "Muhammad Kamal",
+    "role": "Software Engineer (Backend)",
+    "tagline": "I build scalable, high‑performance APIs & platforms.",
+    "location": "Islamabad, Pakistan",
+    "photo": "assets/images/face.jpeg",
+    "resume_url": "#",
+    "social": {
+      "github": "https://github.com/oyekamal",
+      "linkedin": "https://www.linkedin.com/in/oykamal/",
+      "email": "mailto:oyekamalkhan@gmail.com"
+    },
+    "about": "Highly skilled backend engineer with hands‑on experience in Django, Django REST Framework, Flask, Docker, Kafka, RabbitMQ, Redis, and React. Proven track record delivering scalable, high‑performance services: designing backend architectures, building RESTful APIs, containerizing & deploying with Docker, and collaborating across teams to ship secure, reliable systems on AWS and PostgreSQL/MySQL.",
+    "skills": [
+      { "name": "Python", "icon": "fa-brands fa-python" },
+      { "name": "Django", "icon": "fa-solid fa-leaf" },
+      { "name": "Django REST Framework", "icon": "fa-solid fa-plug" },
+      { "name": "Flask", "icon": "fa-solid fa-flask" },
+      { "name": "Kafka", "icon": "fa-solid fa-wave-square" },
+      { "name": "RabbitMQ", "icon": "fa-solid fa-envelope-open-text" },
+      { "name": "Redis", "icon": "fa-solid fa-bolt" },
+      { "name": "Docker", "icon": "fa-brands fa-docker" },
+      { "name": "AWS", "icon": "fa-brands fa-aws" },
+      { "name": "PostgreSQL", "icon": "fa-solid fa-database" },
+      { "name": "MySQL", "icon": "fa-solid fa-database" },
+      { "name": "MongoDB", "icon": "fa-solid fa-database" },
+      { "name": "Elasticsearch", "icon": "fa-solid fa-magnifying-glass" },
+      { "name": "React", "icon": "fa-brands fa-react" },
+      { "name": "Git", "icon": "fa-brands fa-git-alt" },
+      { "name": "Linux", "icon": "fa-brands fa-linux" }
+    ],
+    "experience": [
+      {
+        "title": "Senior Software Engineer (Backend)",
+        "company": "Central Asian Cellular Forum",
+        "location": "Islamabad, Pakistan",
+        "start": "Dec 2022",
+        "end": "Present",
+        "bullets": [
+          "Designed and implemented REST APIs using Python, Flask, and MySQL; deployed services to production.",
+          "Optimized and refactored services, improving slow responses by 80% and reducing latency by over 90%.",
+          "Documented services and wrote unit, integration, and performance tests to improve quality."
+        ],
+        "stack": ["Python", "Flask", "MySQL", "Pytest", "CI/CD"]
+      },
+      {
+        "title": "Software Engineer",
+        "company": "Paymob",
+        "location": "Remote (Egypt)",
+        "start": "Jun 2022",
+        "end": "Dec 2022",
+        "bullets": [
+          "Built a payment gateway using Django REST Framework, Docker, and PostgreSQL.",
+          "Designed and implemented APIs; integrated with payment providers and financial institutions.",
+          "Ensured system security and reliability; collaborated with frontend for smooth user experience.",
+          "Maintained infrastructure and deployments with Docker; worked with DevOps for high availability and scalability."
+        ],
+        "stack": ["Django REST Framework", "Docker", "PostgreSQL", "AWS"]
+      },
+      {
+        "title": "Python Backend Developer",
+        "company": "Rapidev DMCC",
+        "location": "Islamabad, Pakistan",
+        "start": "Apr 2021",
+        "end": "Jul 2022",
+        "bullets": [
+          "Developed and maintained a defense project using DRF, Docker, Elasticsearch, PostgreSQL, Selenium, Channels, and Kafka.",
+          "Designed backend architecture including database schema, APIs, and server-side logic.",
+          "Built a robust, scalable API with Django REST Framework.",
+          "Containerized and deployed with Docker to streamline releases.",
+          "Implemented search with Elasticsearch and real-time messaging with Channels and Kafka."
+        ],
+        "stack": ["Django REST Framework", "Docker", "Elasticsearch", "PostgreSQL", "Kafka", "Django Channels"]
+      },
+      {
+        "title": "Python Backend Developer",
+        "company": "Metis International Limited",
+        "location": "Islamabad, Pakistan",
+        "start": "Nov 2020",
+        "end": "May 2021",
+        "bullets": [
+          "Built and maintained web applications using Django, Django REST Framework, and MongoDB.",
+          "Designed and managed databases using ERD and SQL (MySQL, JSON).",
+          "Applied OOP principles and best practices to write clean, maintainable code.",
+          "Built REST APIs and endpoints to integrate frontend and backend systems."
+        ],
+        "stack": ["Django", "Django REST Framework", "MongoDB", "MySQL", "OOP"]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Painting Website",
+        "description": "Django‑powered website for showcasing and managing artwork; streamlined upload and display flows for creators.",
+        "image": "assets/images/paintings.jpg",
+        "stack": ["Django", "DRF", "Bootstrap", "PostgreSQL"],
+        "links": { "github": null, "demo": null }
+      },
+      {
+        "title": "2D Mouth Lip‑Sync Tool",
+        "description": "Automates generation of 2D mouth lip‑sync animations from audio/text; speeds up animation workflows.",
+        "image": "assets/images/lip-sync.png",
+        "stack": ["Python", "Automation", "Web"],
+        "links": { "github": null, "demo": null }
+      },
+      {
+        "title": "Payment Gateway (Paymob)",
+        "description": "Designed and implemented payment APIs; integrated providers, secured flows, and deployed Dockerized services.",
+        "image": null,
+        "stack": ["DRF", "Docker", "PostgreSQL", "AWS"],
+        "links": { "github": null, "demo": null }
+      }
+    ]
+  }
+  </script>
+
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container flex-lg-column">
-            <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-                <span class="h3 fw-bold d-block d-lg-none">Kamal</span>
-                <img src="./assets/images/face.jpeg" class="d-none d-lg-block rounded-circle" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Experiance">Experiance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skill">skill</a>
-                    <!-- </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li> -->
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- //NAVBAR -->
-
-    <!-- CONTENT WRAPPER -->
-    <div id="content-wrapper">
-
-        <!-- HOME -->
-        <section id="home" class="full-height px-lg-5">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'm a <span class="text-brand">Software
-                                Engineer</span> From Pakistan, Islamabad</h1>
-                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">I am Kamal, Python Backend
-                            developer with team spirit and a positive, can-do attitude.</p>
-                        <p data-aos="fade-up" data-aos-delay="600">In my previous role, I was responsible for designing and
-                            developing RESTful APIs using Django and Django Rest Framework. I have also worked on database design
-                            and optimization, as well as AWS deployment and management.</p>
-                        <div data-aos="fade-up" data-aos-delay="900">
-                            <a href="#Projects" class="btn btn-brand me-3">Explore My Work</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- //HOME -->
-
-        <!-- SERVICES -->
-        <section id="services" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">SERVICES</h6>
-                        <h1>Services That I Provide</h1>
-                    </div>
-                </div>
-
-                <div class="row gy-4">
-
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="service p-4 bg-base rounded-4 shadow-effect">
-                            <div class="iconbox rounded-4">
-                                <!-- <i class="las la-feather"></i> -->
-                                <i class="las la-code"></i>
-                            </div>
-                            <h5 class="mt-4 mb-2">Website development</h5>
-                            <p>I will create a Django website from scratch and maintain existing websites.</p>
-                            <!-- <a href="#" class="link-custom">Read More</a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service p-4 bg-base rounded-4 shadow-effect">
-                            <div class="iconbox rounded-4">
-                                <!-- <i class="las la-pencil-ruler"></i> -->
-                                <i class="lar la-caret-square-right"></i>
-                            </div>
-                            <h5 class="mt-4 mb-2">Automation</h5>
-                            <p>Automate the boring task using python for example automating Social media</p>
-                            <!-- <a href="#" class="link-custom">Read More</a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service p-4 bg-base rounded-4 shadow-effect">
-                            <div class="iconbox rounded-4">
-                                <i class="las la-laptop-code"></i>
-                            </div>
-                            <h5 class="mt-4 mb-2">Dockerizing </h5>
-                            <p>Dockerizing your project. connecting differnt front-end, backend and databases</p>
-                            <!-- <a href="#" class="link-custom">Read More</a> -->
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- SERVICES -->
-
-        <!-- WORK -->
-        <section id="Projects" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">WORK</h6>
-                        <h1>Projects</h1>
-                    </div>
-                </div>
-
-                <div class="row gy-4">
-
-                    <div class="col-md-6" data-aos="fade-up">
-                        <div class="card-custom rounded-4 bg-base shadow-effect">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/lip-sync.png" alt="">
-                            </div>
-                            <div class="card-custom-content p-4">
-                                <h4>Automate Animation (lip-sync)</h4>
-                                <p>Developed and implemented an innovative mouth lipsyncing tool website that automates the process
-                                    of creating 2D mouth lipsync animations. Designed a user-friendly interface to simplify the
-                                    lipsync animation process for both experienced and novice animators. Utilized audio and text
-                                    scripts to generate high-quality mouth lipsync animations with a green background, saving time
-                                    and effort for animators. Enabled animators to easily remove the green background using video
-                                    editing software and use the lipsync animation in other video projects. Demonstrated a strong
-                                    understanding of 2D animation and provided animators with an efficient and effective way to
-                                    create professional-quality animations.</p>
-                                <p>Client • December 2022 - January 2023</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" data-aos="fade-up">
-                        <div class="card-custom rounded-4 bg-base shadow-effect">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/paintings.jpg" alt="">
-                            </div>
-                            <div class="card-custom-content p-4">
-                                <h4>Painting Website</h4>
-                                <p>A Django-powered website for artwork showcasing and management. Includes an intuitive user
-                                    interface for artwork upload, features for easy management and display of artwork on the
-                                    website,
-                                    and a seamless experience for artists to upload, manage, and share their artwork with the world.
-                                </p>
-                                <p>January 2023 - February 2023</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- //WORK -->
-
-        <!-- Experiance -->
-        <section id="Experiance" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">Experiance</h6>
-                        <h1>Experiance</h1>
-                    </div>
-                </div>
-
-                <div class="row gy-5">
-
-
-                    <div class="col-lg-6">
-
-                        <!-- <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiance</h3> -->
-                        <div class="row gy-4">
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Senior Python Developer / Django Developer</h4>
-                                    <p class="text-brand mb-2">Rapidev (Jan 2021 - Jul 2022)</p>
-                                    <p class="mb-0">Working on defense Owlsense Project. which extract all data of the
-                                        user from social media to dark web and user behavior on social media
-                                        , in order to achieve this we use a number of different technologies in which i
-                                        work are. Django, Docker, Elasticsearch, Postgres, Celery and rabbitMQ
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Backend Developer</h4>
-                                    <p class="text-brand mb-2">Metis international (Dec 2020 – Apr 2021)</p>
-                                    <p class="mb-0">Build APIs for Instamunch and Vodafone. Vodafone in short VFQ is a
-                                        car tracking product
-                                        and Instamunch is restaurant backend. Also work on microservices using Docker,
-                                        Rabbitmq, Celery and Cronjob</p>
-                                </div>
-                            </div>
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Researcher</h4>
-                                    <p class="text-brand mb-2">NUST Institute of Information Technology (Jan 2018 – Dec
-                                        2019)</p>
-                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
-                                        consectetur adipisicing elit</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6">
-
-                        <!-- <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Education</h3> -->
-                        <div class="row gy-4">
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Textile pattern image generator using GAN (FYP)</h4>
-                                    <p class="text-brand mb-2">Iqra university final year project (Mar 2020 – Jan 2021)
-                                    </p>
-                                    <p class="mb-0">Transfer learning of StyleGAN2 on textile pattern design for Final
-                                        Year Project. Automate
-                                        the process of creating pattern design.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Cancer Image Classification</h4>
-                                    <p class="text-brand mb-2">Iqra university Research (Feb 2020 – Aug 2020)</p>
-                                    <p class="mb-0">Recognizing Benign, Malignant Tumors images using deep convolution
-                                        neural network
-                                        using python library Tensor Flow Keras</p>
-                                </div>
-                            </div>
-
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-base p-4 rounded-4 shadow-effect">
-                                    <h4>Bottle Classification OpenCV</h4>
-                                    <p class="text-brand mb-2">Iqra university (Mar 2019 – Jun 2019)</p>
-                                    <p class="mb-0">Bottle are classified based on their height and weight, and bottle
-                                        are detected by HSV
-                                        technique</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- //ABOUT -->
-
-        <!-- REVIEWS -->
-        <section id="skill" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">SKILLS</h6>
-                        <!-- <h1>What our subscribers say</h1> -->
-                    </div>
-                </div>
-
-                <div class="row gy-3 justify-content-center align-items-center">
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/python_logo.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">Python</p>
-                            <p class="text">A popular programming language for web development, data analysis, and artificial
-                                intelligence.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/django.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">Django</p>
-                            <p class="text">A Python web framework that provides a high-level framework for creating secure
-                                and scalable web applications.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/docker.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">Docker</p>
-                            <p class="text">A containerization platform that allows developers to package applications into
-                                containers that can run on any environment.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/git.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">Git</p>
-                            <p class="text">A version control system that enables developers to track changes to their
-                                codebase.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/vscode.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">Visual Studio Code</p>
-                            <p class="text">A code editor that supports various programming languages and integrates with
-                                other tools such as git, debugging, and testing frameworks.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/opencv.png" alt="" style="max-width: 80px;">
-                            </div>
-                            <p class="mt-3 mb-0 font-weight-bold">OpenCV</p>
-                            <p class="text">A library of programming functions mainly aimed at real-time computer vision.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- //REVIEWS -->
-
-        <!-- BLOG -->
-        <!-- <section id="blog" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">BLOG</h6>
-                        <h1>My BLog Posts</h1>
-                    </div>
-                </div>
-
-                <div class="row gy-4">
-
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="card-custom rounded-4 bg-base shadow-effect">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/blog-post-1.jpg" alt="">
-                            </div>
-                            <div class="card-custom-content p-4">
-                                <p class="text-brand mb-2">20 Dec, 2022</p>
-                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
-                                <a href="#" class="link-custom">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-custom rounded-4 bg-base shadow-effect">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/blog-post-2.jpg" alt="">
-                            </div>
-                            <div class="card-custom-content p-4">
-                                <p class="text-brand mb-2">20 Dec, 2022</p>
-                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
-                                <a href="#" class="link-custom">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card-custom rounded-4 bg-base shadow-effect">
-                            <div class="card-custom-image rounded-4">
-                                <img class="rounded-4" src="./assets/images/blog-post-3.jpg" alt="">
-                            </div>
-                            <div class="card-custom-content p-4">
-                                <p class="text-brand mb-2">20 Dec, 2022</p>
-                                <h5 class="mb-4">Design a creative landing page using Bootstrap 5</h5>
-                                <a href="#" class="link-custom">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section> -->
-        <!-- //BLOG -->
-
-        <!-- CONTACT -->
-        <!-- <section id="contact" class="full-height px-lg-5">
-            <div class="container">
-
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8 pb-4" data-aos="fade-up">
-                        <h6 class="text-brand">CONTACT</h6>
-                        <h1>Interested in working together? Let's talk
-                        </h1>
-                    </div>
-
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-                        <form action="#" class="row g-lg-3 gy-3">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="Enter your name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-                            <div class="form-group col-12">
-                                <input type="text" class="form-control" placeholder="Enter subject">
-                            </div>
-                            <div class="form-group col-12">
-                                <textarea name="" rows="4" class="form-control"
-                                    placeholder="Enter your message"></textarea>
-                            </div>
-                            <div class="form-group col-12 d-grid">
-                                <button type="submit" class="btn btn-brand">Contact me</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-
-            </div>
-        </section> -->
-        <!-- //CONTACT -->
-
-        <!-- FOOTER -->
-        <footer class="py-5 px-lg-5">
-            <div class="container">
-                <div class="row gy-4 justify-content-between">
-                    <div class="col-auto">
-                        <p class="mb-0">Designed by <a href="#" class="fw-bold">KAMAL</a></p>
-                    </div>
-                    <div class="col-auto">
-                        <div class="social-icons">
-                            <!-- <a href="#"><i class="lab la-twitter"></i></a> -->
-                            <a href="https://www.instagram.com/oykamal/"><i class="lab la-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/muhammad-kamal-025600121/"><i class="lab la-linkedin"></i></a>
-                            <a href="https://github.com/oyekamal"><i class="lab la-github"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- //FOOTER -->
-
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
+  <!-- Navbar (rendered) -->
+  <nav id="mainNav" class="navbar navbar-expand-lg bg-body fixed-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top" id="brand-slot">
+        <!-- brand injected -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- //CONTENT WRAPPER -->
+  </nav>
 
+  <main id="top" class="pt-5">
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-bold" id="hero-title">Backend Engineer</h1>
+            <p class="lead text-secondary" id="hero-subtitle">I design scalable APIs & systems.</p>
+            <div class="hero-cta" id="hero-cta"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title fw-semibold">About</h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-md-8">
+            <p class="fs-5" id="about-text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/aos.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- Skills -->
+    <section id="skills" class="section bg-body-tertiary">
+      <div class="container">
+        <h2 class="section-title fw-semibold">Skills</h2>
+        <div id="skills-list" class="d-flex flex-wrap"></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title fw-semibold">Experience</h2>
+        <div id="experience-list" class="vstack gap-3"></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title fw-semibold">Projects</h2>
+        <div id="projects-grid" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-body-tertiary">
+      <div class="container">
+        <h2 class="section-title fw-semibold">Contact</h2>
+        <div class="d-flex align-items-center gap-3 flex-wrap" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <small class="text-secondary" id="copyright"></small>
+      <div class="d-flex align-items-center gap-2">
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-label="Toggle color mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mustache templates -->
+  <script id="tpl-skill" type="x-tmpl-mustache">
+    <span class="badge rounded-pill badge-soft me-2 mb-2">
+      {{#icon}}<i class="{{icon}} me-1"></i>{{/icon}}{{name}}
+    </span>
+  </script>
+
+  <script id="tpl-project" type="x-tmpl-mustache">
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        {{#image}}
+        <img src="{{image}}" class="card-img-top" alt="{{title}}">
+        {{/image}}
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text flex-grow-1">{{description}}</p>
+          {{#stack.length}}
+          <div class="stack mb-3">
+            {{#stack}}
+            <span class="badge rounded-pill badge-soft">{{.}}</span>
+            {{/stack}}
+          </div>
+          {{/stack.length}}
+          <div class="d-flex gap-2">
+            {{#links.github}}
+            <a class="btn btn-outline-secondary btn-sm icon-btn" href="{{links.github}}" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+            {{/links.github}}
+            {{#links.demo}}
+            <a class="btn btn-primary btn-sm icon-btn" href="{{links.demo}}" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+            </a>
+            {{/links.demo}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="tpl-experience" type="x-tmpl-mustache">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+          <div>
+            <h5 class="card-title mb-1">{{title}}</h5>
+            <div class="text-secondary">{{company}}{{#location}} · {{location}}{{/location}}</div>
+          </div>
+          <div class="text-secondary small">{{start}} — {{end}}</div>
+        </div>
+        {{#bullets.length}}
+        <ul class="mt-3 mb-2">
+          {{#bullets}}
+          <li>{{.}}</li>
+          {{/bullets}}
+        </ul>
+        {{/bullets.length}}
+        {{#stack.length}}
+        <div class="stack">
+          {{#stack}}
+          <span class="badge rounded-pill badge-soft">{{.}}</span>
+          {{/stack}}
+        </div>
+        {{/stack.length}}
+      </div>
+    </div>
+  </script>
+
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Rendering + behavior -->
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme');
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', theme);
+      const themeToggle = document.getElementById('themeToggle');
+      const updateThemeIcon = () => {
+        themeToggle.innerHTML = document.documentElement.getAttribute('data-bs-theme') === 'dark'
+          ? '<i class="fa-solid fa-sun"></i>'
+          : '<i class="fa-solid fa-moon"></i>';
+      };
+      updateThemeIcon();
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-bs-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-bs-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeIcon();
+      });
+    })();
+
+    async function loadContent() {
+      try {
+        const res = await fetch('content.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('No content.json');
+        return await res.json();
+      } catch (e) {
+        const raw = document.getElementById('default-content').textContent;
+        return JSON.parse(raw);
+      }
+    }
+
+    function el(tag, cls, html) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (html) n.innerHTML = html;
+      return n;
+    }
+
+    function renderBrand(data) {
+      const brandSlot = document.getElementById('brand-slot');
+      brandSlot.innerHTML = '';
+      if (data.photo) {
+        const img = el('img', 'avatar', '');
+        img.src = data.photo;
+        img.alt = data.name;
+        brandSlot.appendChild(img);
+      }
+      const span = el('span', 'fw-semibold', data.name || 'Portfolio');
+      brandSlot.appendChild(span);
+    }
+
+    function renderHero(data) {
+      document.getElementById('hero-title').textContent = `${data.name || ''} · ${data.role || 'Engineer'}`;
+      document.getElementById('hero-subtitle').textContent = data.tagline || '';
+
+      const cta = document.getElementById('hero-cta');
+      cta.innerHTML = '';
+      if (data.resume_url && data.resume_url !== '#') {
+        cta.appendChild(el('a', 'btn btn-primary icon-btn', '<i class="fa-solid fa-file"></i> Resume')).setAttribute('href', data.resume_url);
+      }
+      if (data.social && data.social.github) {
+        const a = el('a', 'btn btn-outline-secondary icon-btn', '<i class="fa-brands fa-github"></i> GitHub');
+        a.href = data.social.github; a.target = '_blank'; a.rel = 'noreferrer';
+        cta.appendChild(a);
+      }
+      if (data.social && data.social.linkedin) {
+        const a = el('a', 'btn btn-outline-secondary icon-btn', '<i class="fa-brands fa-linkedin"></i> LinkedIn');
+        a.href = data.social.linkedin; a.target = '_blank'; a.rel = 'noreferrer';
+        cta.appendChild(a);
+      }
+    }
+
+    function renderAbout(data) {
+      document.getElementById('about-text').textContent = data.about || '';
+    }
+
+    function renderSkills(data) {
+      const box = document.getElementById('skills-list');
+      box.innerHTML = '';
+      const skills = Array.isArray(data.skills) ? data.skills : [];
+      const tplEl = document.getElementById('tpl-skill');
+      const canTpl = !!(window.Mustache && tplEl);
+      if (canTpl) {
+        const tpl = tplEl.innerHTML;
+        skills.forEach(s => {
+          const html = Mustache.render(tpl, s);
+          box.insertAdjacentHTML('beforeend', html);
+        });
+      } else {
+        // Fallback: build badges via DOM
+        skills.forEach(s => {
+          const span = el('span', 'badge rounded-pill badge-soft me-2 mb-2');
+          if (s.icon) {
+            const i = el('i', s.icon + ' me-1');
+            span.appendChild(i);
+          }
+          span.appendChild(document.createTextNode(s.name || ''));
+          box.appendChild(span);
+        });
+      }
+    }
+
+    function renderProjects(data) {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = '';
+      const projects = Array.isArray(data.projects) ? data.projects : [];
+      const tplEl = document.getElementById('tpl-project');
+      const canTpl = !!(window.Mustache && tplEl);
+      if (canTpl) {
+        const tpl = tplEl.innerHTML;
+        projects.forEach(p => {
+          const html = Mustache.render(tpl, p);
+          grid.insertAdjacentHTML('beforeend', html);
+        });
+      } else {
+        // Fallback DOM rendering
+        projects.forEach(p => {
+          const col = el('div', 'col-md-6 col-lg-4');
+          const card = el('div', 'card h-100 shadow-sm');
+          if (p.image) {
+            const img = el('img', 'card-img-top');
+            img.src = p.image; img.alt = p.title || '';
+            card.appendChild(img);
+          }
+          const body = el('div', 'card-body d-flex flex-column');
+          body.appendChild(el('h5', 'card-title', (p.title || '')));
+          body.appendChild(el('p', 'card-text flex-grow-1', (p.description || '')));
+          if (Array.isArray(p.stack) && p.stack.length) {
+            const stack = el('div', 'stack mb-3');
+            p.stack.forEach(s => stack.appendChild(el('span', 'badge rounded-pill badge-soft me-1', s)));
+            body.appendChild(stack);
+          }
+          const actions = el('div', 'd-flex gap-2');
+          if (p.links && p.links.github) {
+            const a = el('a', 'btn btn-outline-secondary btn-sm icon-btn', '<i class="fa-brands fa-github"></i> Code');
+            a.href = p.links.github; a.target = '_blank'; a.rel = 'noreferrer';
+            actions.appendChild(a);
+          }
+          if (p.links && p.links.demo) {
+            const a = el('a', 'btn btn-primary btn-sm icon-btn', '<i class="fa-solid fa-arrow-up-right-from-square"></i> Demo');
+            a.href = p.links.demo; a.target = '_blank'; a.rel = 'noreferrer';
+            actions.appendChild(a);
+          }
+          body.appendChild(actions);
+          card.appendChild(body);
+          col.appendChild(card);
+          grid.appendChild(col);
+        });
+      }
+    }
+
+    function renderExperience(data) {
+      const list = document.getElementById('experience-list');
+      if (!list) return;
+      list.innerHTML = '';
+      const items = Array.isArray(data.experience) ? data.experience : [];
+      const tplEl = document.getElementById('tpl-experience');
+      const canTpl = !!(window.Mustache && tplEl);
+      if (canTpl) {
+        const tpl = tplEl.innerHTML;
+        items.forEach(job => {
+          const html = Mustache.render(tpl, job);
+          list.insertAdjacentHTML('beforeend', html);
+        });
+      } else {
+        // Fallback DOM rendering
+        items.forEach(job => {
+          const card = el('div', 'card shadow-sm');
+          const body = el('div', 'card-body');
+          const head = el('div', 'd-flex justify-content-between align-items-start flex-wrap gap-2');
+          const left = el('div', '');
+          left.appendChild(el('h5', 'card-title mb-1', job.title || ''));
+          left.appendChild(el('div', 'text-secondary', `${job.company || ''}${job.location ? ' · ' + job.location : ''}`));
+          const right = el('div', 'text-secondary small', `${job.start || ''} — ${job.end || ''}`);
+          head.appendChild(left); head.appendChild(right);
+          body.appendChild(head);
+          if (Array.isArray(job.bullets) && job.bullets.length) {
+            const ul = el('ul', 'mt-3 mb-2');
+            job.bullets.forEach(b => ul.appendChild(el('li', '', b)));
+            body.appendChild(ul);
+          }
+          if (Array.isArray(job.stack) && job.stack.length) {
+            const stack = el('div', 'stack');
+            job.stack.forEach(s => stack.appendChild(el('span', 'badge rounded-pill badge-soft me-1', s)));
+            body.appendChild(stack);
+          }
+          card.appendChild(body);
+          list.appendChild(card);
+        });
+      }
+    }
+
+    function renderContact(data) {
+      const wrap = document.getElementById('contact-links');
+      wrap.innerHTML = '';
+      if (data.social && data.social.email) {
+        const a = el('a', 'btn btn-primary icon-btn', '<i class="fa-solid fa-envelope"></i> Email');
+        a.href = data.social.email;
+        wrap.appendChild(a);
+      }
+      if (data.social && data.social.github) {
+        const a = el('a', 'btn btn-outline-secondary icon-btn', '<i class="fa-brands fa-github"></i> GitHub');
+        a.href = data.social.github; a.target = '_blank'; a.rel = 'noreferrer';
+        wrap.appendChild(a);
+      }
+      if (data.social && data.social.linkedin) {
+        const a = el('a', 'btn btn-outline-secondary icon-btn', '<i class="fa-brands fa-linkedin"></i> LinkedIn');
+        a.href = data.social.linkedin; a.target = '_blank'; a.rel = 'noreferrer';
+        wrap.appendChild(a);
+      }
+    }
+
+    function renderFooter(data) {
+      const year = new Date().getFullYear();
+      document.getElementById('copyright').textContent = `© ${year} ${data.name || ''}`;
+    }
+
+    (async function init() {
+      const data = await loadContent();
+      try { renderBrand(data); } catch (e) { console.error('brand', e); }
+      try { renderHero(data); } catch (e) { console.error('hero', e); }
+      try { renderAbout(data); } catch (e) { console.error('about', e); }
+      try { renderSkills(data); } catch (e) { console.error('skills', e); }
+      try { renderExperience(data); } catch (e) { console.error('experience', e); }
+      try { renderProjects(data); } catch (e) { console.error('projects', e); }
+      try { renderContact(data); } catch (e) { console.error('contact', e); }
+      try { renderFooter(data); } catch (e) { console.error('footer', e); }
+    })();
+  </script>
+
 </body>
 
 </html>
